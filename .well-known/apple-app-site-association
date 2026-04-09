@@ -1,0 +1,14 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "8C46327334.com.solex.develop.NFCDemo",
+                "paths": ["/nfc/*", "/tag/*", "/open/*", "/launch/*"]
+            }
+        ]
+    },
+    "webcredentials": {
+        "apps": ["8C46327334.com.solex.develop.NFCDemo"]
+    }
+}
