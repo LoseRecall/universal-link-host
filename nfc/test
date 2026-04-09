@@ -1,0 +1,23 @@
+// Test script for Web NFC API
+// This script checks if Web NFC is supported and attempts to read NFC tags
+
+if ('NDEFReader' in window) {
+  console.log("Web NFC is supported");
+
+  const ndef = new NDEFReader();
+
+  ndef.scan().then(() => {
+    console.log("Scan started successfully");
+    ndef.onreading = event => {
+      console.log("NDEF message read:");
+      console.log(event.message);
+    };
+    ndef.onreadingerror = event => {
+      console.log("Reading error:", event);
+    };
+  }).catch(error => {
+    console.log("Scan failed:", error);
+  });
+} else {
+  console.log("Web NFC is not supported in this browser");
+}
